@@ -1,6 +1,7 @@
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { McpModule, McpTransportType } from '@rekog/mcp-nest';
+import { HackerNewsService } from './hacker-news/hacker-news.service';
 
 @Module({
   imports: [
@@ -20,6 +21,6 @@ import { McpModule, McpTransportType } from '@rekog/mcp-nest';
     }),
   ],
   controllers: [],
-  providers: [],
+  providers: [HackerNewsService],
 })
 export class AppModule {}
