@@ -1,0 +1,26 @@
+{
+  "name": "@mcp-nexus/hacker-news-mcp-server-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@mcp-nexus/hacker-news-mcp-server"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/hacker-news-mcp-server-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@mcp-nexus/hacker-news-mcp-server:build",
+          "@mcp-nexus/hacker-news-mcp-server:serve"
+        ]
+      }
+    }
+  }
+}
