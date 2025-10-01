@@ -1,10 +1,25 @@
+import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { McpModule, McpTransportType } from '@rekog/mcp-nest';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    HttpModule.registerAsync({
+      useFactory: () => ({
+        timeout: 5000,
+        maxRedirects: 5,
+      }),
+    }),
+    McpModule.forRoot({
+      name: 'hacker-news-mcp',
+      version: '1.0.0',
+      instructions: 'This MCP server provides access to Hacker News data.',
+      transport: [McpTransportType.SSE, McpTransportType.STREAMABLE_HTTP],
+      sseEndpoint: 'sse',
+      apiPrefix: '/',
+    }),
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
