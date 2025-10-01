@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@nestjs/schematics": "^11.0.0",
     "@nx/js": "21.6.2",
+    "@nx/nest": "^21.6.2",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
@@ -16,6 +17,14 @@
     "typescript": "~5.9.2"
   },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "apps/*"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "@nestjs/axios": "^4.0.1",
+    "@rekog/mcp-nest": "^1.8.3",
+    "axios": "^1.12.2",
+    "zod": "^3.25.76"
+  }
 }
