@@ -2,7 +2,8 @@
 
 ## 摘要 (Summary)
 
-本專案 (`mcp-nexus`) 是一個採用 Nx Monorepo 架構的工作空間，旨在開發與管理一系列遵循模型上下文協定 (Model Context Protocol, MCP) 的獨立伺服器。  
+本專案 (`mcp-nexus`) 是一個採用 Nx Monorepo 架構的工作空間，旨在開發與管理一系列遵循模型上下文協定 (Model Context Protocol, MCP) 的獨立伺
+服器。  
 
 最終目標是將這些伺服器作為可組合的工具 (composable tools)，讓大型語言模型 (LLM) 能夠串連不同服務，自動化執行複雜的資訊處理任務，例如：從 `hacker-news-mcp-server` 獲取使用者感興趣的新聞，進行整理與總結後，再透過 `hackmd-mcp-server` 將結果儲存為一篇新的 HackMD 筆記。
 
@@ -57,3 +58,15 @@
 3. **重構共享邏輯：** 建立 `libs/shared-mcp-core`，並將通用的 MCP 邏輯從 `hackmd-mcp-server` 中抽離出來。  
 4. **開發新服務：** 在 `apps/` 中建立 `hacker-news-mcp-server`，並讓它依賴共享函式庫。  
 5. **端對端測試：** 設計測試案例，模擬 LLM 調度兩個伺服器完成一個完整的工作流。  
+
+## 開發參考 (Development Reference)
+
+本專案在 `docs/MCP-Nest` 路徑下存放了一份 `@rekog/mcp-nest` 套件的完整文件與 `playground` 程式碼範例。
+
+**目的：** 為了提供 AI 助理 (例如 Gemini) 一個完整、離線的參考資料庫，使其在開發過程中能夠：
+
+1.  **深入理解套件功能：** 直接查閱官方文件與範例，確保功能的正確使用。
+2.  **加速問題排查：** 透過比對 `playground` 中的官方實作，快速定位問題。
+3.  **提升開發效率：** 減少因資訊不足而導致的錯誤嘗試。
+
+當需要對 `MCP-Nest` 相關功能進行開發或修改時，AI 助理應優先查閱此路徑下的文件。
