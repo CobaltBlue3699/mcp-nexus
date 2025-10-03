@@ -3,11 +3,18 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "mcp:inspect": "npx @modelcontextprotocol/inspector",
     "start:hacker-news": "nx serve hacker-news-mcp-server",
     "lint:hacker-news": "nx lint hacker-news-mcp-server --fix",
     "test:hacker-news": "nx test hacker-news-mcp-server",
     "build:hacker-news": "nx build hacker-news-mcp-server",
-    "e2e:hacker-news": "nx e2e hacker-news-mcp-server-e2e"
+    "e2e:hacker-news": "nx e2e hacker-news-mcp-server-e2e",
+    "start:hackmd": "nx serve hackmd-mcp-server",
+    "lint:hackmd": "nx lint hackmd-mcp-server --fix",
+    "test:hackmd": "nx test hackmd-mcp-server",
+    "build:hackmd": "nx build hackmd-mcp-server",
+    "e2e:hackmd": "nx e2e hackmd-mcp-server-e2e",
+    "start:all": "nx run-many --target=serve --projects=hacker-news-mcp-server,hackmd-mcp-server"
   },
   "private": true,
   "devDependencies": {
@@ -51,6 +58,7 @@
     "@modelcontextprotocol/sdk": "^1.18.2",
     "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.0.0",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
     "@rekog/mcp-nest": "^1.8.3",

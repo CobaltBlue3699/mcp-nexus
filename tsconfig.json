@@ -8,6 +8,12 @@
     },
     {
       "path": "./apps/hacker-news-mcp-server"
+    },
+    {
+      "path": "./apps/hackmd-mcp-server-e2e"
+    },
+    {
+      "path": "./apps/hackmd-mcp-server"
     }
   ]
 }

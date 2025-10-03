@@ -1,0 +1,26 @@
+{
+  "name": "@mcp-nexus/hackmd-mcp-server-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@mcp-nexus/hackmd-mcp-server"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/hackmd-mcp-server-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@mcp-nexus/hackmd-mcp-server:build",
+          "@mcp-nexus/hackmd-mcp-server:serve"
+        ]
+      }
+    }
+  }
+}

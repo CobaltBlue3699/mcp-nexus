@@ -52,7 +52,10 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/hacker-news-mcp-server-e2e/**/*"]
+      "exclude": [
+        "apps/hacker-news-mcp-server-e2e/**/*",
+        "apps/hackmd-mcp-server-e2e/**/*"
+      ]
     }
   ],
   "targetDefaults": {

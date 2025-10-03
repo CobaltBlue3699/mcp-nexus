@@ -59,7 +59,7 @@
 4. **開發新服務：** 在 `apps/` 中建立 `hacker-news-mcp-server`，並讓它依賴共享函式庫。  
 5. **端對端測試：** 設計測試案例，模擬 LLM 調度兩個伺服器完成一個完整的工作流。  
 
-## 開發參考 (Development Reference)
+## 開發MCP相關功能參考 (Development Reference)
 
 本專案在 `docs/MCP-Nest` 路徑下存放了一份 `@rekog/mcp-nest` 套件的完整文件與 `playground` 程式碼範例。
 
@@ -70,3 +70,14 @@
 3.  **提升開發效率：** 減少因資訊不足而導致的錯誤嘗試。
 
 當需要對 `MCP-Nest` 相關功能進行開發或修改時，AI 助理應優先查閱此路徑下的文件。
+
+## 開發HackMD相關功能參考 (Development Reference)
+
+本專案在 `docs/HackMD/swagger.json` 路徑下存放了一份 HackMD 的 OpenAPI 文件。
+
+**目的：** 為了提供 AI 助理 (例如 Gemini) 一個完整、離線的參考資料庫，使其在開發過程中能夠：
+
+1.  **深入理解HackMD功能：** 直接查閱官方API文件，了解HackMD官方提供什麼樣的API互動。
+3.  **提升開發效率：** 減少因資訊不足而導致的錯誤嘗試。
+
+當需要對 `HackMD` 相關功能進行開發或修改時，AI 助理應優先查閱此路徑下的文件。
