@@ -214,10 +214,7 @@ export class HackmdService {
       readPermission: z.enum([HackmdNotePermissionRole.owner, HackmdNotePermissionRole.signed_in, HackmdNotePermissionRole.guest]).optional().describe('The read permission level for the note. Default is owner.'),
       writePermission: z.enum([HackmdNotePermissionRole.owner, HackmdNotePermissionRole.signed_in, HackmdNotePermissionRole.guest]).optional().describe('The write permission level for the note. Default is owner.'),
     }),
-    outputSchema: z.object({
-      note: postNoteOutputSchema.describe('The created note object.'),
-      error: z.string().optional().describe('Error message, if any error occurred.'),
-    }),
+    outputSchema: postNoteOutputSchema.describe('The created note object.'),
   })
   async postNote(params: {
     parentFolderId?: string;
@@ -238,6 +235,8 @@ export class HackmdService {
         }),
       ),
     );
+
+    // console.log('Posted note, response data:', data);
 
     return data;
   }
