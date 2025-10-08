@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "hacker-news": {
+      "cwd": ".",
+      "trust": true,
+      "url": "http://localhost:3000/hacker-news/sse"
+    },
+    "hackmd": {
+      "cwd": ".",
+      "trust": true,
+      "url": "http://localhost:3001/hackmd/sse"
+    }
+  }
+}
